@@ -1,7 +1,24 @@
 spring:
+  application:
+    name:
+     - eureka-client-test
   cloud:
     inetutils:
       ignoredInterfaces:
         - docker0
         - veth.*
-        - ipsec0
+        - ipsec.*
+server:
+  port: 8088
+debug: true
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          util: DEBUG
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
